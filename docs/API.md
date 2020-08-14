@@ -13,7 +13,7 @@ Some paths in the API require you to set the `authorization` in the header with 
 
 ### Libraries
 
-Any TopCord libraries can be found [Here](https://docs.topcord.xyz/Libraries).
+Any TopCord libraries can be found [Here](https://docs.topcord.xyz/#/Libraries).
 
 The [BotBlock](https://botblock.org/api/docs/libs) libraries are also compatible but wont work with receiving votes from the API.
 
