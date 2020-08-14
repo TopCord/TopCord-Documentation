@@ -11,9 +11,10 @@ This is the page for TopCord's Rest API.
 
 Some paths in the API require you to set the `authorization` in the header with the **API Token**.
 
-### Packages
+### Libraries
 
-We don't have any packages but you can use http/https/request/axios for Javascript, Requests/httplib/urllib for Python and HttpURLConnection/Apache HTTP Client/Unirest for Java.
+Any TopCord libraries can be found [Here](https://docs.topcord.xyz/libraries).
+The BotBlock libraries are also compatible but wont work with receiving votes from the API.
 
 
 ### Endpoints
