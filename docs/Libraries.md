@@ -22,5 +22,5 @@ tcapi.on('error', (e) => {
 
 
 #### How to submit a library?
-**To submit a library dm a site admin on Discord.**
+To submit a library dm a site admin on Discord.
 
