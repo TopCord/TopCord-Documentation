@@ -21,5 +21,6 @@ tcapi.on('error', (e) => {
 ```
 
 
-#### If you would like to submit a wrapper you made, dm a site admin on Discord!
+#### How to submit a library?
+**To submit a library dm a site admin on Discord.**
 
