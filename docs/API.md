@@ -67,7 +67,7 @@ The [BotBlock](https://botblock.org/api/docs/libs) libraries are also compatible
 
 ```js
 {
-    "guilds": 0
+    "guilds": 0,
     "shards": 0
 }
 ```
