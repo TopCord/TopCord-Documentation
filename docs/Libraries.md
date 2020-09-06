@@ -7,6 +7,8 @@ This is the page for TopCord's community made libraries!
 **TCAPI.JS**
 
 [GitHub](https://github.com/Misly16/TCAPI.JS)
+
+Posting Stats
 ```js
 const TCAPI = require('tcapi.js');
 const tcapi = new TCAPI('tcapi_token', client);
@@ -19,6 +21,30 @@ tcapi.on('error', (e) => {
   console.log(`Error: ${e}`);
 });
 ```
+
+Receiving Votes
+```js
+const TCAPI = require('tcapi.js');
+const tcapi = new TCAPI('tcapi_token', {port: 5000});
+
+tcapi.webhook.on('listening', (info) => {
+  console.log(`Listening on port: ${info.port} and on path: ${info.path}`);
+});
+
+tcapi.webhook.on('vote', (info) => {
+  console.log(`${info.userID} voted at ${info.date}`);
+});
+
+```
+
+| Parameter     | Type          | Required  |
+| ------------- |:-------------:| ---------:|
+| token         | String        |   Yes     |
+| options       | Object        |   No      |
+| options.port  | Number        |   No      |
+| options.path  | String        |   No      |
+| client        | Discord Client|   No      |
+
 
 ## Python 
 
