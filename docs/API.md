@@ -17,6 +17,21 @@ Any TopCord libraries can be found [Here](https://docs.topcord.xyz/#/Libraries).
 
 The [BotBlock](https://botblock.org/api/docs/libs) libraries are also compatible but wont work with receiving votes from the API.
 
+#### Receive Votes
+
+- **Method:** POST
+- **Path:** `N/A`
+- **Authentication:** N/A
+- **Info:** You can receive a post request when a user votes by setting a Webhook URL in your bots edit page. The recommended way of doing this is using our  [libraries](https://docs.topcord.xyz/#/Libraries).
+
+**Body:**
+
+```js
+{
+    "id": 0,
+    "date": "xyz"
+}
+```
 
 ### Endpoints
 
