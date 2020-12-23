@@ -6,7 +6,7 @@ The following requirements must be met to get your bot listed!
 
 ### Your Bot Must
 - **Have Proper Error Handling**
-- Have a detailed Short/Long description (See [How to write a good description](https://docs.topcord.xyz/#/submit?id=how-to-write-a-good-description))
+- Have a detailed Short/Long description (See [How to write a good description](https://docs.topcord.xyz/#/Submit?id=how-to-write-a-good-description))
 - Have an obvious point of entry (EX: Help Command)
 - Follow Discord [Terms of Server](https://discord.com/terms), [Guidelines](https://discord.com/guidelines), and [Developer Policy](https://discord.com/developers/docs/policy)
 
