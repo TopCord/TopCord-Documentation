@@ -4,4 +4,4 @@
 - [API](API.md)
 - [TopCord Bot](Bot.md)
 - [Libraries](Libraries.md)
-
+- [Submit](Submit.md)
