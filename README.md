@@ -1,6 +1,6 @@
 # Home
 
-Documentation for TopCord's systems and API.
+Welcome to TopCord! Join the server then add your bot! Official documentation for TopCord's systems and API.
 
 ## Navigation
 - [Home](/README.md)
