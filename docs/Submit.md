@@ -28,6 +28,7 @@ The following requirements must be met to get your bot listed!
 - Have inappropriate/default icon.
 - Have commands/features that can rate limit.
 - Break Discord’s Terms of Service/Developer Policy
+- Be a `slash command` only bot! If it is, please make the bot respond with a help command on mention!
 
 ## Submitting Your Bot
 A step-by-step guide to listing your bot at TopCord
@@ -45,6 +46,7 @@ The site will ask for your bot's information such as Client ID, prefix, library,
 We at TopCord would like to make it very clear that **we are picky** when it comes to bot descriptions. If you don't have time to write a good description you likely don't have time to actively maintain your bot, and what's the use in that? To make it clear what we want in your description we've outline the requirements below with a few good examples.
 
 ### A Good Description
+- Be a **decent** length! What we approve one bot for, will not always get your bot approved for if it lacks length!
 - Explains why your bot is good.
 - Talks about your bots key features.
 - Convinces a user to invite your bot.
