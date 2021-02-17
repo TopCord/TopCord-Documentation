@@ -1,9 +1,6 @@
 # Home
 
-Documentation for TopCord's systems and API.
+Hello there! Welcome to the Documentation repository!
+Suggesting any edits? Feel free to send in a pull request and we'll get into it!
 
-## Navigation
-- [Home](/README.md)
-- [API](API.md)
-- [TopCord Bot](Bot.md)
-- [Submit](Submit.md)
+Running on Gatsby Rocket Docs!

@@ -1,0 +1,115 @@
+# Bots
+This is the page for TopCord's Rest API.
+
+# Endpoints
+
+## List Bots
+
+```
+GET /bots
+```
+- **Authentication:** Not Required
+
+Lists every bot that is added to the list
+
+#### Response
+| Field | Type              | Description        |
+|-------|-------------------|--------------------|
+| N/A   | [Bot[]](#structure) | The bots structure |
+
+
+## Get information about a specific bot
+
+```
+GET /bot/:id
+```
+- **Authentication:** Not Required
+
+Lists information about a specific bot
+
+#### Response
+The [Bot](#structure) structure or a [failure response](#Failure-Responses)
+
+
+## Set bot statisctics
+
+```
+POSTS /bot/:id/stats
+```
+- **Authentication:** Required
+
+#### Post body
+| Field  | Type   | Description                        | Required |
+|--------|--------|------------------------------------|----------|
+| guilds | number | The number of guilds the bot is in | Yes      |
+| shards | number | The number of shards the bot has   | No       |
+
+#### Response
+A [success response](#Success-Responses) or a [failure response](#Failure-Responses)
+
+
+## Structure
+
+### Bot structure
+| Field            | Type     | Description                     |
+|------------------|----------|---------------------------------|
+| ClientID         | string   | The bots client ID              |
+| Library          | string   | The library the bot was made in |
+| Owners           | string[] | The owners of the bot           |
+| Tags             | string[] | The bots tags                   |
+| ShortDescription | string   | The bots short description      |
+| Website          | string   | The bots website                |
+| Certified        | boolean  | If the bot is certified or not  |
+| Statistics       | number[] | The bots shard and guild count  |
+
+
+### Example bot structure
+```json lineNumbers=true title=Example Response
+{
+  "ClientID": "275813801792634880",
+  "Library": "discord.js",
+  "Owners": [
+    "148359099782791168"
+  ],
+  "Tags": [
+    "Moderation",
+    "Utility"
+  ],
+  "ShortDescription": "Zira is a reaction role Discord bot that allows users to give themselves roles by reacting on messages with emojis/emotes.",
+  "Website": "https://zira.gg",
+  "SupportServer": "https://discord.gg/zira",
+  "Certified": true,
+  "Statistics": {
+    "Votes": 0,
+    "Servers": 0
+  }
+}
+```
+
+## Success Responses
+
+```json title=Responses lineNumbers=true
+// 200
+{
+    "message": "Bot Updated"
+}
+```
+
+## Failure Responses
+
+```json title=Responses lineNumbers=true
+// 404
+{
+    "message": "Not Found"
+}
+
+// 401
+{
+    "message": "Unauthorized or Incorrect Token"
+}
+
+// 422
+{
+    "message": "Incorrect Parameter"
+}
+```

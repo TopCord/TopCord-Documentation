@@ -1,0 +1,24 @@
+# Sidebar navigation
+
+- label: "Introduction"
+  link: "/"
+- label: API
+  items:
+    - label: "Getting Started"
+      link: "/api/getting-started"
+    - label: "Bots"
+      link: "/api/bots"
+    - label: "WebHooks"
+      link: "/api/webhooks"
+- label: Libraries
+  items:
+    - label: "JavaScript"
+      link: "/libraries/javascript"
+    - label: "Python"
+      link: "/libraries/python"
+- label: Community
+  items:
+    - label: "Github"
+      link: https://github.com/Topcord/TopCord-Documentation
+    - label: "Discord"
+      link: https://discord.gg/zira
