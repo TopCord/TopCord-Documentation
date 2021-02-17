@@ -1,0 +1,32 @@
+# WebHooks
+Receiving vote data
+
+## Authentication
+On the bots edit page you can set an authentication string for webhooks which will be sent in the headers of the requests so that you can verify that the requests are coming from us, an example of the header can be seen below.
+
+```json title=Headers lineNumbers=true
+{
+  "Authorization": "token"
+}
+```
+
+## Structure
+
+### Response
+| Field    | Type   | Description                        |
+|----------|--------|------------------------------------|
+| User     | User[] | The user structure                 |
+| ClientID | string | The id of the bot/server           |
+| Type     | string | If the vote is for a server or bot |
+
+### Example response
+```json lineNumbers=true title=Example Response
+{
+  "User": {
+    "ClientID": "319680837320704003",
+    "Date": <date here>
+  },
+  "ClientID": "275813801792634880",
+  "Type": "Bot"
+}
+```
