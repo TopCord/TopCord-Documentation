@@ -1,1 +1,72 @@
 # Python
+
+**topcord.py**
+
+[GitHub](https://github.com/HeathHollows/topcord.py)
+
+## How To Install
+### Install Via Pip (Recommended)
+`pip install topcord.py`
+
+### Install from Source
+```
+git clone https://github.com/HeathHollows/topcord
+cd TCAPI.PY
+pip install -r requirements.txt
+```
+
+## Examples
+### Get Bot Stats
+```py lineNumbers=true
+import discord asyncio
+import topcord
+from discord.ext import commands
+
+class TopCord(commands.Cog):
+    """Interacts with TopCord API"""
+
+    def __init__(self, bot):
+        self.bot = bot
+        self.TopCord = topcord(token=token) # You will need to add your API token from TopCord Here!
+
+    @commands.command(name="stats"):
+        tc = self.TopCord.get_stats(self.bot.user.id)
+
+        e = discord.Embed(
+            title="Bot Stats"
+        )
+        e.add_field(name="Bot Website", value=tc['Website'])
+        e.add_field(name="Tags", value=tc['Tags'])
+
+def setup(bot):
+    bot.add_cog(TopCord(bot))
+```
+
+### Post Bot Stats (Using Tasks)
+```py lineNumbers=true
+import discord, asyncio
+import topcord
+from discord.ext import tasks, commands
+
+class TopCord(commands.Cog):
+    """Interacts with the TopCord API"""
+
+    def __init__(self, bot):
+        self.bot = bot
+        self.update_stats.start()
+        self.TopCord = topcord(token=token) # You will need to add your API token from TopCord Here!
+
+    def cog_unload(self):
+        self.update_stats.cancel()
+
+    @tasks.loop(minutes=30.0)
+    async def update_stats(self):
+        """This automatically updates your server count to topcord.xyz every 30 minutes."""
+        try:
+            await topcord.post_stats(self.bot.user.id, len(self.bot.guilds))
+        except Exception as e:
+            print('Failed to post server count to topcord.xyz\n' + type(e).__name__ + ':' + e')
+
+def setup(bot):
+    bot.add_cog(TopCord(bot))
+```
