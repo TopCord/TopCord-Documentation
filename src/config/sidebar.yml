@@ -10,6 +10,8 @@
       link: "/api/bots"
     - label: "WebHooks"
       link: "/api/webhooks"
+    - label: "Widgets"
+      link: "/api/widgets"
 - label: Libraries
   items:
     - label: "JavaScript"
